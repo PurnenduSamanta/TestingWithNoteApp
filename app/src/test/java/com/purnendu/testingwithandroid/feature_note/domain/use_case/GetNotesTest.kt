@@ -35,6 +35,10 @@ class GetNotesTest {
         runBlocking {
             notesToInsert.forEach { fakeRepository.insertNote(it) }
         }
+        runBlocking {
+            val a=getNotes.invoke(NoteOrder.Title(OrderType.Ascending)).first()
+        }
+
     }
 
     @Test
