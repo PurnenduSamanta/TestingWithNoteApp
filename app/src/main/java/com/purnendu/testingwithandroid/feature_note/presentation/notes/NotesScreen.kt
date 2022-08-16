@@ -14,9 +14,11 @@ import androidx.compose.runtime.rememberCoroutineScope
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.platform.testTag
+import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.dp
 import androidx.hilt.navigation.compose.hiltViewModel
 import androidx.navigation.NavController
+import com.purnendu.testingwithandroid.R
 import com.purnendu.testingwithandroid.feature_note.presentation.notes.components.NoteItem
 import com.purnendu.testingwithandroid.feature_note.presentation.notes.components.OrderSection
 import com.purnendu.testingwithandroid.feature_note.presentation.util.Screen
@@ -56,7 +58,7 @@ fun NotesScreen(
                 verticalAlignment = Alignment.CenterVertically
             ) {
                 Text(
-                    text = "Your note",
+                    text = "Your note(${stringResource(id = R.string.version_name)})",
                     style = MaterialTheme.typography.h4
                 )
                 IconButton(
